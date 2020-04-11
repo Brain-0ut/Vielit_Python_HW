@@ -8,7 +8,6 @@ class Employee:
         self.surname = surname
         self.mail = mail
         self.salary = salary
-        self._class = 'Employee'
         Employee.empCount += 1
 
     def work(self):
@@ -24,14 +23,13 @@ class Employee:
         return self.salary*days
 
     def __str__(self):
-        return "{}: {} {}".format(self._class, self.name, self.surname)
+        return "{}: {} {}".format(self.__class__.__name__, self.name, self.surname)
 
 
 class Recruiter(Employee):
 
     def __init__(self, name, surname, mail, salary):
         super().__init__(name, surname, mail, salary)
-        self._class = 'Recruiter'
         self.hired_this_month = 0
 
     def work(self):
@@ -43,7 +41,6 @@ class Programmer(Employee):
 
     def __init__(self, name, surname, mail, salary, tech_stack):
         super().__init__(name, surname, mail, salary)
-        self._class = 'Programmer'
         self.tech_stack = tech_stack
         self.closed_this_month = []
 
