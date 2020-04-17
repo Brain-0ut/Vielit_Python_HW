@@ -20,4 +20,5 @@ class Product:
     def price_total(self, count):
         return self.price*count
 
-print ('product.py')
+
+print('product.py')
