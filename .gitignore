@@ -1,1 +1,30 @@
 /Lesson15/test.py
+
+# Ignore everything
+*
+
+# But don't ignore folders
+!*/
+
+# But do ignore these folders
+.ssh/
+
+#tmp/
+#CLang_prog/
+
+# But don't ignore these files
+
+# But don't ignore these types of files
+!*.c
+!*.cpp
+!*.css
+!*.db
+!*.h
+!*.html
+!*.java
+!*.js
+!*.md
+!*.py
+!*.sql
+!*.txt
+!Makefile
